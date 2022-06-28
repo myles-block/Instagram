@@ -20,7 +20,6 @@
 		F3560691286A553F00574B6B /* InstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3560690286A553F00574B6B /* InstagramTests.m */; };
 		F356069B286A553F00574B6B /* InstagramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F356069A286A553F00574B6B /* InstagramUITests.m */; };
 		F356069D286A553F00574B6B /* InstagramUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F356069C286A553F00574B6B /* InstagramUITestsLaunchTests.m */; };
-		F35606AA286A5A3800574B6B /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = F35606A9286A5A3800574B6B /* Keys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +66,6 @@
 		F3560696286A553F00574B6B /* InstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F356069A286A553F00574B6B /* InstagramUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramUITests.m; sourceTree = "<group>"; };
 		F356069C286A553F00574B6B /* InstagramUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramUITestsLaunchTests.m; sourceTree = "<group>"; };
-		F35606A9286A5A3800574B6B /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +154,6 @@
 				F3560680286A553F00574B6B /* Assets.xcassets */,
 				F3560682286A553F00574B6B /* LaunchScreen.storyboard */,
 				F3560685286A553F00574B6B /* Info.plist */,
-				F35606A9286A5A3800574B6B /* Keys.plist */,
 				F3560686286A553F00574B6B /* main.m */,
 			);
 			path = Instagram;
@@ -287,7 +284,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F35606AA286A5A3800574B6B /* Keys.plist in Resources */,
 				F3560684286A553F00574B6B /* LaunchScreen.storyboard in Resources */,
 				F3560681286A553F00574B6B /* Assets.xcassets in Resources */,
 				F356067F286A553E00574B6B /* Main.storyboard in Resources */,
