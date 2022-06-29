@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "SceneDelegate.h"
 #import "LoginViewController.h"
+#import "ComposeViewController.h"
 
 @interface HomeFeedViewController ()
 
@@ -31,14 +32,27 @@
     [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error){}];//clears out the user's information & sets it to nil
 }
 
+
+
 /*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
+    if([[segue identifier] isEqualToString:@"composeSegue"])
+    {
+        // Get the new view controller using [segue destinationViewController].
+        UINavigationController *navigationController = [segue destinationViewController];
+        // Pass the selected object to the new view controller[WHAT YOU ARE SEGUING INTO]
+        //ALSO WHEN YOU SEGUE ADD YOUR DELEGATIONS TO YOUR INTERFACE ie: <ComposeViewControllerDelegate> -> [WHAT YOU ARE SEGUING INTO]
+        //CREATE YOUR DELEGATE INTO YOUR SEGUED VIEW HEADER FILE ie: @property (nonatomic, weak) id<ComposeViewControllerDelegate> delegate;
+        ComposeViewController *composeController = (ComposeViewController*)navigationController.topViewController;
+        composeController.delegate = self;
+        
+    }
     // Pass the selected object to the new view controller.
 }
-*/
 
+*/
 @end
