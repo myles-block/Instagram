@@ -93,23 +93,24 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="cH0-on-nVt">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="anj-OK-Pfq">
-                                <rect key="frame" x="369" y="9.5" width="25" height="25"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="7vF-vY-Mj8">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ymy-dA-n1a">
+                                <rect key="frame" x="345" y="2.5" width="49" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="insta_camera_btn"/>
+                                <state key="normal" title="Button" image="insta_camera_btn"/>
+                                <buttonConfiguration key="configuration" style="plain" image="insta_camera_btn" title=""/>
+                                <connections>
+                                    <segue destination="Rt3-ep-8OA" kind="presentation" modalPresentationStyle="fullScreen" id="rTd-oC-PLv"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <segue destination="Rt3-ep-8OA" kind="presentation" identifier="composeSegue" modalPresentationStyle="fullScreen" id="bCy-JR-8YD"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="04E-dA-x63" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="834"/>
+            <point key="canvasLocation" x="137.68115942028987" y="833.70535714285711"/>
         </scene>
         <!--Compose View Controller-->
         <scene sceneID="rg2-Qd-EQy">
@@ -122,22 +123,22 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="jU5-Xk-LFm">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="boB-WR-hrI">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="uUq-zn-pPn">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="96V-6a-Fln">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="4XM-NF-2fP">
                                 <rect key="frame" x="20" y="6.5" width="69" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapCancel:" destination="Ipp-xa-UDY" eventType="touchUpInside" id="qmx-Fx-wDJ"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="didTapCancel:" destination="Ipp-xa-UDY" id="GjG-ak-UZd"/>
-                            </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="gbR-Hc-lHb">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="5eU-EA-hrC">
-                                <rect key="frame" x="341" y="6.5" width="53" height="31"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="KLp-b0-z3h">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="spf-iY-vX7">
+                                <rect key="frame" x="239" y="167" width="67" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Post">

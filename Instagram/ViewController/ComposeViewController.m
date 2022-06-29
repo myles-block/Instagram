@@ -22,12 +22,7 @@
 
 
 - (IBAction)didTapCancel:(id)sender {//sends back to HomeFeed
-    
-    SceneDelegate *mySceneDelegate = (SceneDelegate * )UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
-
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    HomeFeedViewController *HomeFeedViewController = [storyboard instantiateViewControllerWithIdentifier:@"HomeFeedViewController"];
-    mySceneDelegate.window.rootViewController = HomeFeedViewController;//^^all this code moves the storyboard back to the login screen
+    [self dismissViewControllerAnimated:true completion:nil];//only works when connecting view from button, if configured manually use scene delegation code
     
 }
 
