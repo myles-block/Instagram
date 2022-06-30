@@ -59,15 +59,9 @@
 - (IBAction)didTapPostContent:(id)sender {
     [Post postUserImage:self.selectedPhotoImageView.image withCaption:self.createCaptionTextField.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
         NSLog(@"success");
-    }];
-//    SceneDelegate *mySceneDelegate = (SceneDelegate * )UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
-//
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    HomeFeedViewController *homeFeedViewController = [storyboard instantiateViewControllerWithIdentifier:@"HomeFeedViewController"];
-//    mySceneDelegate.window.rootViewController = homeFeedViewController;//^^all this code moves the storyboard back to the login screen
+    }];//creates a Post with specific user image and caption
     [self dismissViewControllerAnimated:true completion:nil];
     
-//    self.createCaptionTextField.text;
 }
 
 
