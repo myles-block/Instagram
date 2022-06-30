@@ -12,6 +12,8 @@
 #import "ComposeViewController.h"
 
 @interface HomeFeedViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *feedTableView;
+
 
 @end
 

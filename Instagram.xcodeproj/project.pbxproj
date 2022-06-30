@@ -23,6 +23,7 @@
 		F35FA0E6286BAFA700DE3F10 /* HomeFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35FA0E5286BAFA700DE3F10 /* HomeFeedViewController.m */; };
 		F376CD99286BC4D300999BA0 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F376CD98286BC4D300999BA0 /* ComposeViewController.m */; };
 		F376CD9D286CDE2200999BA0 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = F376CD9C286CDE2200999BA0 /* Post.m */; };
+		F376CDA0286D326700999BA0 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F376CD9F286D326700999BA0 /* FeedCell.m */; };
 		F3DCDA0B286A7E9D00E3F99F /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3DCDA0A286A7E9D00E3F99F /* Keys.plist */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,8 @@
 		F376CD98286BC4D300999BA0 /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
 		F376CD9B286CDE2200999BA0 /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		F376CD9C286CDE2200999BA0 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		F376CD9E286D326700999BA0 /* FeedCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
+		F376CD9F286D326700999BA0 /* FeedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
 		F3DCDA0A286A7E9D00E3F99F /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +158,7 @@
 		F3560673286A553E00574B6B /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				F376CDA2286D32F800999BA0 /* Cells */,
 				F3DCDA0C286A7FC200E3F99F /* ViewController */,
 				F376CD9A286CDDD200999BA0 /* Models */,
 				F3560675286A553E00574B6B /* AppDelegate.m */,
@@ -165,8 +169,8 @@
 				F3560680286A553F00574B6B /* Assets.xcassets */,
 				F3560682286A553F00574B6B /* LaunchScreen.storyboard */,
 				F3560685286A553F00574B6B /* Info.plist */,
-				F3560686286A553F00574B6B /* main.m */,
 				F3DCDA0A286A7E9D00E3F99F /* Keys.plist */,
+				F3560686286A553F00574B6B /* main.m */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -195,6 +199,16 @@
 				F376CD9C286CDE2200999BA0 /* Post.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F376CDA2286D32F800999BA0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F376CD9E286D326700999BA0 /* FeedCell.h */,
+				F376CD9F286D326700999BA0 /* FeedCell.m */,
+			);
+			name = Cells;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		F3DCDA0C286A7FC200E3F99F /* ViewController */ = {
@@ -450,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F35FA0E6286BAFA700DE3F10 /* HomeFeedViewController.m in Sources */,
+				F376CDA0286D326700999BA0 /* FeedCell.m in Sources */,
 				F356067C286A553E00574B6B /* LoginViewController.m in Sources */,
 				F3560676286A553E00574B6B /* AppDelegate.m in Sources */,
 				F376CD99286BC4D300999BA0 /* ComposeViewController.m in Sources */,
