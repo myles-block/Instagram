@@ -8,6 +8,7 @@
 #import "ComposeViewController.h"
 #import "HomeFeedViewController.h"
 #import "SceneDelegate.h"
+#import "Post.h"
 
 @interface ComposeViewController ()
 
@@ -15,9 +16,18 @@
 
 @implementation ComposeViewController
 
-//MARK: Where to put Instantiate a UIImagePickerController code & why create a delegate (also fix app icon)
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+
+- (IBAction)didTapCancel:(id)sender {//sends back to HomeFeed
+    [self dismissViewControllerAnimated:true completion:nil];//only works when connecting view from button, if configured manually use scene delegation code
+    
+    
+//MARK: Camera Functions
+}
+- (IBAction)didTapSetPhoto:(id)sender {//tap gesture that triggers camera roll
     UIImagePickerController *imagePickerVC = [UIImagePickerController new];//creates new UIImagePickerController
     imagePickerVC.delegate = self;//delegates
     imagePickerVC.allowsEditing = YES;//allows editing
@@ -36,10 +46,32 @@
 }
 
 
-- (IBAction)didTapCancel:(id)sender {//sends back to HomeFeed
-    [self dismissViewControllerAnimated:true completion:nil];//only works when connecting view from button, if configured manually use scene delegation code
+- (IBAction)didTapAccessCameraRoll:(id)sender {
+    UIImagePickerController *imagePickerVC = [UIImagePickerController new];//creates new UIImagePickerController
+    imagePickerVC.delegate = self;//delegates
+    imagePickerVC.allowsEditing = YES;//allows editing
+    imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:imagePickerVC animated:YES completion:nil];
     
 }
+
+- (IBAction)didTapPostContent:(id)sender {
+    [Post postUserImage:self.selectedPhotoImageView.image withCaption:self.createCaptionTextField.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+        NSLog(@"success");
+    }];
+//    SceneDelegate *mySceneDelegate = (SceneDelegate * )UIApplication.sharedApplication.connectedScenes.allObjects.firstObject.delegate;
+//
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    HomeFeedViewController *homeFeedViewController = [storyboard instantiateViewControllerWithIdentifier:@"HomeFeedViewController"];
+//    mySceneDelegate.window.rootViewController = homeFeedViewController;//^^all this code moves the storyboard back to the login screen
+    [self dismissViewControllerAnimated:true completion:nil];
+    
+//    self.createCaptionTextField.text;
+}
+
+
+
 
 /*
 #pragma mark - Navigation

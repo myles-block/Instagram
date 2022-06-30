@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ComposeViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *selectedPhotoImageView;
+@property (weak, nonatomic) IBOutlet UITextView *createCaptionTextField;
 
 @end
 
