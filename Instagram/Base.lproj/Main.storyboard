@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -68,6 +69,47 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
         </scene>
+        <!--Details View Controller-->
+        <scene sceneID="BYl-jf-FSJ">
+            <objects>
+                <viewController id="Hyw-nf-JCa" customClass="DetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ABP-5f-8l8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1oa-UF-hvi" customClass="PFImageView">
+                                <rect key="frame" x="28" y="83" width="353" height="358"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkg-sU-pcG">
+                                <rect key="frame" x="28" y="468" width="149" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcS-wx-m95">
+                                <rect key="frame" x="31" y="513" width="346" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dVe-JD-yiN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qfx-ye-40d"/>
+                    <connections>
+                        <outlet property="createdAtLabel" destination="Gkg-sU-pcG" id="DhU-vJ-9BL"/>
+                        <outlet property="detailImage" destination="1oa-UF-hvi" id="fcK-pI-cbF"/>
+                        <outlet property="detailsCaptionLabel" destination="DcS-wx-m95" id="vqc-2B-Lbp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cDY-ay-dfg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="211.59420289855075" y="1572.9910714285713"/>
+        </scene>
         <!--Home Feed-->
         <scene sceneID="axb-Kn-DrI">
             <objects>
@@ -120,6 +162,7 @@
                                         <connections>
                                             <outlet property="connectedFeedCaption" destination="66i-rq-Xa6" id="Vvy-fe-h8r"/>
                                             <outlet property="connectedFeedImage" destination="VhA-kk-QPQ" id="Qmy-td-xc9"/>
+                                            <segue destination="w8y-Rw-VFd" kind="presentation" identifier="detailSegue" id="0uh-pP-aOF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -167,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="04E-dA-x63" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="833.70535714285711"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="833.70535714285711"/>
         </scene>
         <!--Compose View Controller-->
         <scene sceneID="rg2-Qd-EQy">
@@ -256,7 +299,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1918.840579710145" y="833.70535714285711"/>
+            <point key="canvasLocation" x="2828.985507246377" y="833.70535714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="id0-30-fli">
@@ -292,12 +335,33 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0JJ-NS-f2s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976.81159420289862" y="833.70535714285711"/>
+            <point key="canvasLocation" x="1886.9565217391305" y="833.70535714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ed4-Nu-YEM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w8y-Rw-VFd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Nb-Ih-iHg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Hyw-nf-JCa" kind="relationship" relationship="rootViewController" id="yLG-Gv-eGq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="APf-n5-Sgo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="212" y="834"/>
         </scene>
     </scenes>
     <resources>
         <image name="image_placeholder" width="375" height="375"/>
         <image name="insta_camera_btn" width="25" height="25"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

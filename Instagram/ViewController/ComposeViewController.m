@@ -51,7 +51,6 @@
     imagePickerVC.delegate = self;//delegates
     imagePickerVC.allowsEditing = YES;//allows editing
     imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
     [self presentViewController:imagePickerVC animated:YES completion:nil];
     
 }
@@ -59,9 +58,9 @@
 - (IBAction)didTapPostContent:(id)sender {
     [Post postUserImage:self.selectedPhotoImageView.image withCaption:self.createCaptionTextField.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
         NSLog(@"success");
+        [self dismissViewControllerAnimated:true completion:nil];
     }];//creates a Post with specific user image and caption
-    [self dismissViewControllerAnimated:true completion:nil];
-    
+        
 }
 
 
